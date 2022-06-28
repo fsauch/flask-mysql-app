@@ -6,12 +6,6 @@ This repo provides a demo-app for the [Ansible training](https://blog.confirm.ch
 
 ### Frontend
 
-#### Red Hat
-* The epel channel is needed -> Install the `epel-release` package
-* Install these yum packages: `python3-devel`, `python3-pip`, `MySQL-python`, `python3-gunicorn`
-* Install PIP packages: `flask`, `flask-mysql`, `markupsafe`
-* Clone this repo -> `git clone https://github.com/pstauffer/flask-mysql-app.git`
-
 #### Debian
 * Install this apt/deb packages: `pythoni3-dev`, `python3-pip`, `python3-gunicorn`, `gunicorn3`
 * Install PIP packages: `flask`, `flask-mysql`, `markupsafe`
@@ -35,17 +29,3 @@ This repo provides a demo-app for the [Ansible training](https://blog.confirm.ch
 cd <install-dir>
 python3 app.py
 ```
-
-### with gunicorn
-
-```bash
-# debian
-gunicorn3 --pid /tmp/gunicorn.pid --chdir <install-dir> --bind 0.0.0.0:8000 --daemon wsgi:app
-
-# redhat/centos
-gunicorn-3 --pid /tmp/gunicorn.pid --chdir <install-dir> --bind 0.0.0.0:8000 --daemon wsgi:app
-```
-
-## Test URLs
-* http://web1.[name].lab:8000/
-* http://web2.[name].lab:8000/
