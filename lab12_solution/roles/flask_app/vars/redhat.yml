@@ -1,2 +1,0 @@
----
-gunicorn_binary: /usr/bin/gunicorn-3

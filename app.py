@@ -45,11 +45,5 @@ def showEntries():
     except Exception as e:
         return json.dumps({'error':str(e)})
 
-    except Exception as e:
-        return json.dumps({'error':str(e)})
-    finally:
-        cursor.close()
-        connection.close()
-
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0', port=80,debug=True)
